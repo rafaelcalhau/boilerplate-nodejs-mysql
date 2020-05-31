@@ -1,0 +1,45 @@
+{
+  "name": "netexchange",
+  "description": "NetExchange's Backend",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "dev": "NODE_ENV=development nodemon src/server.js --ignore __tests__",
+    "test": "NODE_ENV=test jest --detectOpenHandles"
+  },
+  "author": {
+    "name": "Rafael Calhau",
+    "email": "rafael@calhau.me",
+    "url": "https://github.com/rafaelcalhau"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "eslint": "7",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "11",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "4",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "sequelize-cli": "^5.5.1",
+    "standard": "^14.3.4",
+    "sucrase": "^3.10.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.10"
+  }
+}
