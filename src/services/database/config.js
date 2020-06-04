@@ -1,7 +1,8 @@
-const dotenv = require('dotenv')
 const fs = require('fs')
+const EnvironmentVariables = require('../../modules/dotenv')
 
-dotenv.config()
+// setting up the env variables
+EnvironmentVariables().init()
 
 const {
   ENVIRONMENT, DB_CERT_KEY, DB_CERT_FILE, DB_CERT_CA,
