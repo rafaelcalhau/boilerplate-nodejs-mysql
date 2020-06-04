@@ -1,18 +1,15 @@
 import cors from 'cors'
-import dotenv from 'dotenv'
 import express from 'express'
 import helmet from 'helmet'
 import routes from './routes'
+import EnvironmentVariables from './modules/dotenv'
 
 let application
 
 const App = function () {
   if (!application) {
-    dotenv.config({
-      path: process.env.NODE_ENV === 'test'
-        ? '.env.test'
-        : (process.env.NODE_ENV === 'development' ? '.env.dev' : '.env')
-    })
+    // setting up the env variables
+    EnvironmentVariables().init()
 
     application = express()
 
