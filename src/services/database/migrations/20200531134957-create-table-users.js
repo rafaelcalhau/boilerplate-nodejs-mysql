@@ -1,30 +1,39 @@
 'use strict'
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: (queryInterface, DataTypes) => {
     return queryInterface.createTable('users', {
       id: {
-        type: Sequelize.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true
       },
       email: {
-        type: Sequelize.STRING(100),
+        type: DataTypes.STRING(100),
         allowNull: false,
         unique: true
       },
       password: {
-        type: Sequelize.STRING(100),
+        type: DataTypes.STRING(100),
         allowNull: false
       },
       name: {
-        type: Sequelize.STRING(100),
+        type: DataTypes.STRING(100),
         allowNull: false
       },
       is_active: {
-        type: Sequelize.BOOLEAN,
+        type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: true
+      },
+      createdAt: {
+        type: 'TIMESTAMP',
+        allowNull: false,
+        defaultValue: Date.now
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true
       }
     })
   },
