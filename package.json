@@ -7,8 +7,11 @@
     "build": "sucrase ./src -d ./dist --transforms imports",
     "dev": "NODE_ENV=development nodemon src/server.js --ignore __tests__",
     "dev:migrations": "NODE_ENV=development npx sequelize-cli db:migrate",
+    "dev:migrations:undo": "NODE_ENV=development npx sequelize-cli db:migrate:undo",
     "prod:migrations": "NODE_ENV=production npx sequelize-cli db:migrate",
+    "prod:migrations:undo": "NODE_ENV=production npx sequelize-cli db:migrate:undo",
     "test:migrations": "NODE_ENV=test npx sequelize-cli db:migrate",
+    "test:migrations:undo": "NODE_ENV=test npx sequelize-cli db:migrate:undo",
     "test": "NODE_ENV=test jest --detectOpenHandles"
   },
   "author": {
