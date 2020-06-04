@@ -1,5 +1,6 @@
 -- create databases
 CREATE DATABASE IF NOT EXISTS `db_production`;
+CREATE DATABASE IF NOT EXISTS `db_development`;
 CREATE DATABASE IF NOT EXISTS `db_test`;
 
 -- create root user and grant rights
