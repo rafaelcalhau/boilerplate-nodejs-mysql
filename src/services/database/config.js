@@ -36,7 +36,11 @@ module.exports = {
     host: DB_SERVER,
     port: 3306,
     dialect: 'mysql',
-    dialectOptions
+    dialectOptions,
+    migrationStorage: 'sequelize',
+    migrationStorageTableName: 'sequelize_meta',
+    seederStorage: 'sequelize',
+    seederStorageTableName: 'sequelize_data'
   },
   production: {
     username: DB_USER,
@@ -45,7 +49,11 @@ module.exports = {
     host: DB_SERVER,
     port: 3306,
     dialect: 'mysql',
-    dialectOptions
+    dialectOptions,
+    migrationStorage: 'sequelize',
+    migrationStorageTableName: 'sequelize_meta',
+    seederStorage: 'sequelize',
+    seederStorageTableName: 'sequelize_data'
   },
   test: {
     username: DB_USER,
@@ -54,6 +62,10 @@ module.exports = {
     host: DB_SERVER,
     port: 3306,
     dialect: 'mysql',
-    dialectOptions
+    dialectOptions,
+    migrationStorage: 'sequelize',
+    migrationStorageTableName: 'sequelize_meta',
+    seederStorage: 'sequelize',
+    seederStorageTableName: 'sequelize_data'
   }
 }
